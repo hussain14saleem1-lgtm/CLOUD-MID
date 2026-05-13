@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevOpsHub - Message Collector</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; background: #f0f4f8; }
+        h1 { color: #2c3e50; }
+        .visits { background: #3498db; color: white; padding: 12px; border-radius: 6px; font-size: 16px; }
+        form { margin-top: 25px; }
+        label { font-weight: bold; display: block; margin-bottom: 8px; }
+        textarea { width: 100%; padding: 10px; height: 110px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box; }
+        button { background: #27ae60; color: white; padding: 12px 22px; border: none; border-radius: 6px; cursor: pointer; margin-top: 12px; font-size: 15px; }
+        button:hover { background: #229954; }
+    </style>
+</head>
+<body>
+    <h1>📝 DevOpsHub Feedback</h1>
+    <div class="visits">👁 Page visits: {{ visits }}</div>
+    <form action="/submit" method="POST">
+        <label>Leave your feedback:</label>
+        <textarea name="message" placeholder="Type your message here..." required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>
